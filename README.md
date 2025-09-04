@@ -20,9 +20,7 @@ Command help system (man, help)
 SUPERBLOCK
 Keeps track of the total and free inodes (files).
 
-c
-Copy
-Edit
+
 typedef struct superblock {
     int TotalInodes;
     int FreeInode;
@@ -30,9 +28,7 @@ typedef struct superblock {
 INODE
 Describes each file with metadata and data buffer.
 
-c
-Copy
-Edit
+
 typedef struct inode {
     char FileName[50];
     int inodeNumber;
@@ -48,9 +44,8 @@ typedef struct inode {
 FILETABLE
 Stores the mode and offset for opened files.
 
-c
-Copy
-Edit
+
+
 typedef struct filetable {
     int readoffset;
     int writeoffset;
@@ -61,9 +56,8 @@ typedef struct filetable {
 UFDT
 User File Descriptor Table to manage open files.
 
-c
-Copy
-Edit
+
+
 typedef struct ufdt {
     PFILETABLE ptrfiletable;
 } UFDT;
